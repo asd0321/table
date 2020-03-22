@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table.js封装</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 500px;
+			border: 1px solid red;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1" class="box"></div>
+	<div id="box2" class="box"></div>
+	<script src="Table.js"></script>
+	<script>
+		new Table({
+			el:'#box1',
+			theadCon:["姓名","年龄","性别","地址","职位"],
+			columns:[
+				{data:"name"},
+				{data:"age"},
+				{data:"sex"},
+				{data:"addr"},
+				{data:"job"}
+			],
+			data:[
+				{name:"杰克",age:"19",sex:"男",addr:"上海",job:"前端"},
+				{name:"Alice",age:"21",sex:"女",addr:"天津",job:"后端"},
+				{name:"Tom",age:"17",sex:"男",addr:"北京",job:"渗透"},
+				{name:"Mick",age:"28",sex:"男",addr:"杭州",job:"人工智能"},
+				{name:"Jack",age:"23",sex:"女",addr:"南昌",job:"数据分析"},
+				{name:"王晓丽",age:"17",sex:"男",addr:"杭州",job:"渗透"}
+			]
+		});
+		new Table({
+			el:'#box2',
+			theadCon:["姓名","年龄","性别","地址","公司"],
+			columns:[
+				{data:"name"},
+				{data:"age"},
+				{data:"sex"},
+				{data:"addr"},
+				{data:"company"}
+			],
+			data:[
+				{name:"杰克",age:"19",sex:"男",addr:"上海",company:"ff"},
+				{name:"Alice",age:"21",sex:"女",addr:"天津",company:"ee"},
+				{name:"Tom",age:"17",sex:"男",addr:"北京",company:"dd"},
+				{name:"Mick",age:"28",sex:"男",addr:"杭州",company:"aa"},
+				{name:"Jack",age:"23",sex:"女",addr:"南昌",company:"bb"},
+				{name:"王晓丽",age:"17",sex:"男",addr:"杭州",company:"cc"}
+			]
+		});
+	</script>
+</body>
+</html>
